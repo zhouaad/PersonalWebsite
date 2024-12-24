@@ -1,0 +1,299 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../../dict/images/boston.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* flex-direction: column; */
+  }
+
+  .page_title {
+    font-size: 2em; /* Size of the font */
+    color: #92D1F9; /* Text color */
+    text-align: center; /* Center align the text */
+    margin: 0; /* Remove default margins */
+    padding: 5px; /* Add some padding */
+    background-color: #6493ca; /* Background color to contrast text */
+    position: fixed; /* Fix the header to the top of the viewport */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left edge */
+    width: 100%; /* Full width of the viewport */
+    z-index: 1000; /* Ensure it stays above other content */
+    }
+
+
+  .left_container {
+    width: 200px;
+    height: 250px;
+    background-color: rgba(51, 51, 51, 0.7); /* Background color with 80% opacity */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px; /* Adding border-radius for rounded corners */
+    /* margin-left: 20px; */
+    margin-right: 50px;
+    margin-left: -40px;
+}
+
+.btn {
+    padding: 20px;
+    margin: 5px;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Adding a smooth transition effect on hover */
+}
+
+/* Hover effect on buttons */
+.btn:hover {
+    background-color: #92D1F9; /* Change the background color on hover */
+}
+
+.right_container{
+    position: relative;
+    width: 70%;
+    height: 800px;
+    background-color: rgba(51, 51, 51, 0.7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin: 20px 20px 30px 20px;
+}
+
+.right_present_Undergraduate,
+.right_present_Master,
+.right_present_inschool {
+    position: absolute;
+    top: 30px;
+    left: 50px;
+    right: 50px;
+    bottom: 50px;
+    padding: 20px; /* Add padding for spacing */
+    display: none;
+    box-sizing: border-box; /* Include padding in the total width */
+    max-height: 800px;
+    overflow-y: auto; 
+}
+
+.right_present_Undergraduate.active,
+.right_present_Master.active,
+.right_present_inschool.active {
+    display: block;
+}
+
+.card {
+    color: #fff;
+}
+
+.card h1{
+    font-size: 30px;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.card h1 span {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.card h1 span:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.card h2{
+    font-size: 23px;
+    font-weight: 200;
+    margin-bottom: 5px;
+    /* font-weight: bold; */
+}
+
+.card h3{
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    /* text-align: right; /* Aligns the text to the right */ 
+    text-align: left; /* Change to 'center', 'right', or 'left' as needed */
+    /* margin-left: 40px;  */
+    /* color: #BC9B6A; */
+}
+
+.card p{
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 25px;
+}
+
+.card a {
+    color: #BC9B6A;
+    position: relative;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.card a:hover {
+    color: #92D1F9;
+}
+
+.card a:after {
+    content: '🔗';
+    font-size: 0.8em;
+    margin-left: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.card a:hover:after {
+    opacity: 1;
+}
+
+.return {
+    position: relative;
+    display: flex;
+    margin: 800px 0 0 0;
+}
+
+.ds_to_home {
+    background-color: rgba(199, 241, 255, 0.8);
+    border-radius: 8px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+a:link {
+    color: #fff;
+}
+
+a:visited{
+    color: #fff;
+}
+
+.mall_video{
+    position: relative;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 50px;
+}
+
+.course-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Colors for undergraduate courses */
+.grid-undergrad .course.header {
+    background-color: #98002E;
+    color: #FFF5F0;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.grid-undergrad .course:not(.header) {
+    background-color: #BC9B6A;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+/* Colors for master's courses */
+.grid-master .course.header {
+    background-color: #B31B1B;
+    color: #FFF5F0;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.grid-master .course:not(.header) {
+    background-color: #A2998B;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+
+@media (max-width: 1024px) {
+    .course-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .course-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+a {
+    color: #fff; /* Sets the default text color of links */
+    text-decoration: none; /* Removes the underline from links */
+}
+
+a:hover {
+    color: #0074BA; /* Changes the text color to blue on hover */
+    text-decoration: underline; /* Adds an underline to the link on hover */
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 30px;
+}
+
+li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+/* First color scheme */
+.color-scheme-1 li:before {
+    content: "\25B6";
+    position: absolute;
+    left: 0;
+    color: #98002E;
+    font-size: 18px;
+}
+
+.color-scheme-1 li strong {
+    color: #BC9B6A;
+    font-weight: 600;
+}
+
+/* Second color scheme */
+.color-scheme-2 li:before {
+    content: "\25B6";
+    position: absolute;
+    left: 0;
+    color: #B31B1B;
+    font-size: 18px;
+}
+
+.color-scheme-2 li strong {
+    color: #FFFFFF;
+    font-weight: 600;
+}

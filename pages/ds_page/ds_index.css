@@ -9,7 +9,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('../../dict/images/ds_cover.jpg');
+    background-image: url('../../dict/images/RI_sunset.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -57,10 +57,8 @@ body{
     margin: 20px 20px 50px 20px;
 }
 
-.right_present_professional,
-.right_present_research,
-.right_present_inschool,
-.right_present_kaggle {
+.right_present_internship,
+.right_present_projects {
     position: absolute;
     top: 30px;
     left: 50px;
@@ -69,14 +67,12 @@ body{
     padding: 20px; /* Add padding for spacing */
     display: none;
     box-sizing: border-box; /* Include padding in the total width */
-    max-height: 800px;
+    max-height: 750px;
     overflow-y: auto; 
 }
 
-.right_present_professional.active,
-.right_present_research.active,
-.right_present_inschool.active,
-.right_present_kaggle.active {
+.right_present_internship.active,
+.right_present_projects.active{
     display: block;
 }
 
@@ -90,6 +86,17 @@ body{
     font-size: 32px;
     font-weight: 400;
     margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.card h1 span {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.card h1 span:hover {
+    transform: scale(1.1);
+    cursor: pointer;
 }
 
 .card h2{
@@ -98,11 +105,50 @@ body{
     margin-bottom: 20px;
 }
 
+.card h2 span {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.card h2 span:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
 .card p{
     font-size: 18px;
-    font-weight: 200;
+    font-weight: 300;
     margin-bottom: 25px;
 }
+
+.card a {
+    color: #BC9B6A;
+    position: relative;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.card a:hover {
+    color: #92D1F9;
+}
+
+.card a:after {
+    content: '🔗';
+    font-size: 0.8em;
+    margin-left: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.card a:hover:after {
+    opacity: 1;
+}
+
+.card strong {
+    font-weight: bold;
+    color: #92D1F9;
+}
+
 
 .stacking_img {
     position: relative;
@@ -124,8 +170,16 @@ body{
 .return {
     position: relative;
     display: flex;
-    margin: 850px 0 0 0;
+    margin: 750px 0 0 0;
 }
+
+.ds_to_home {
+    background-color: rgba(199, 241, 255, 0.8);
+    border-radius: 8px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
 
 a:link {
     color: #fff;
@@ -133,4 +187,34 @@ a:link {
 
 a:visited{
     color: #fff;
+}
+
+/* Hover effect on buttons */
+.btn:hover {
+    background-color: #92D1F9; /* Change the background color on hover */
+}
+
+.project-section {
+    margin: 20px 0;
+}
+
+.project-block {
+    margin-bottom: 20px;
+}
+
+.project-block h4 {
+    color: #92D1F9;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+.project-block ul {
+    margin-left: 20px;
+}
+
+.project-block li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+    font-size: 18px;
+    font-weight: 300;
 }
