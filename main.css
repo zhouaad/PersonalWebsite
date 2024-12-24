@@ -11,7 +11,7 @@ body{
   flex-direction: column; /* Stack elements vertically */;
   justify-content: space-between;
   align-items: center;
-  background-image: url('./dict/images/cover_zqy.jpg');
+  background-image: url('./dict/images/cover.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
